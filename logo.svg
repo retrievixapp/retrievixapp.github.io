@@ -1,5 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
-  <rect width="108" height="108" rx="24" fill="#2F6BFF"/>
-  <path d="M38,62 A18,18 0 1,0 40,42" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
-  <path d="M31,36 L45,37 L40,50 Z" fill="#fff"/>
+  <!-- 网站用的圆角版 logo；应用和商店图标用 retrievix-icon.svg -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4A86FF"/>
+      <stop offset="1" stop-color="#1C3FC2"/>
+    </linearGradient>
+  </defs>
+  <rect width="108" height="108" rx="24" fill="url(#bg)"/>
+  <!-- 逆时针的"恢复"箭头：圆心 (54,54)，半径 27，缺口在左侧 -->
+  <path d="M28.63,63.23A27,27 0 1,0 28.63,44.77" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M33.8,46.65L26.24,51.35L23.46,42.89Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- 照片卡片：山和太阳 -->
+  <path d="M45,39H63A6,6 0 0,1 69,45V63A6,6 0 0,1 63,69H45A6,6 0 0,1 39,63V45A6,6 0 0,1 45,39Z" fill="#FFFFFF"/>
+  <path d="M42.5,64.5L49.5,55L54.5,60.5L58.5,56.5L65.5,64.5Z" fill="#2F6BFF"/>
+  <path d="M57.5,46.5A3,3 0 1,0 63.5,46.5A3,3 0 1,0 57.5,46.5Z" fill="#FFC94D"/>
 </svg>
