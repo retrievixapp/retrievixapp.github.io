@@ -95,8 +95,8 @@
 
     <h2>2. What the app does on your device</h2>
     <ul>
-      <li><strong>Scan.</strong> Retrievix looks through your device storage for photos, videos, audio and documents
-        that you normally can’t see: files in hidden folders, files the system has moved to its trash, cached copies,
+      <li><strong>Scan.</strong> Retrievix looks through the folders you allow (see section 3) for photos, videos, audio
+        and documents that you normally can’t see: files in hidden folders, files the system has moved to its trash, cached copies,
         and files whose name or extension doesn’t match their content. To do this it reads file names, sizes, dates,
         folder structure and the beginning of each file (to recognise its type). This happens only on your device.</li>
       <li><strong>Recover.</strong> When you recover a file, the app moves it into the app’s private Recycle Bin: it
@@ -106,7 +106,8 @@
       <li><strong>Vault.</strong> Files you import into the Vault are copied into the app’s private storage and the
         originals are deleted. You can restore them to the public folders above at any time. The Vault is not
         encrypted and has no password.</li>
-      <li><strong>Search.</strong> Searching for documents by name is done locally on your device.</li>
+      <li><strong>Search.</strong> Searching for documents by name covers the folders you allow and is done locally on
+        your device.</li>
       <li><strong>WhatsApp message backup (optional).</strong> If you turn this feature on and grant notification
         access, the app saves the text of WhatsApp message notifications your phone receives — conversation name,
         sender name, message text and time — in a database on your device, so you can still read them later. It does not
@@ -123,14 +124,16 @@
       <table>
         <tr><th>Permission</th><th>Why we need it</th></tr>
         <tr>
-          <td>All files access<br><span class="muted">(Android 11 and later; granted in system settings)</span></td>
-          <td>To scan all of your device storage, including hidden folders, for recoverable files; to move recovered
-            files into the Recycle Bin; to export files back to public folders; and to search for documents. Used only
-            on the device.</td>
+          <td>Access to folders you choose<br><span class="muted">(granted folder by folder in the system folder picker)</span></td>
+          <td>To scan and search those folders, including hidden folders inside them, for recoverable files, to preview
+            them, and to move the files you recover into the Recycle Bin. The app cannot see folders you have not
+            allowed. You can remove a folder at any time in Settings → Folders to search. Used only on the device. The
+            app does not request “All files access”.</td>
         </tr>
         <tr>
-          <td>Storage<br><span class="muted">(Android 8–10)</span></td>
-          <td>The same purposes on older Android versions.</td>
+          <td>Storage<br><span class="muted">(Android 8–10 only)</span></td>
+          <td>Requested when you export or restore files, to write them to <code>Pictures</code>, <code>Movies</code>,
+            <code>Music</code> or <code>Documents</code>. Android 11 and later does not need it.</td>
         </tr>
         <tr>
           <td>Notification access<br><span class="muted">(optional; granted in system settings)</span></td>
